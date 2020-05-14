@@ -1,0 +1,15 @@
+.center{
+	text-align: center;
+	font-weight: bold;
+}
+
+.blocks {
+	display: inline-block; 
+  	width: 370px;
+  	height: 100px;
+  	padding-right: 5px;
+	}
+
+body {
+	width: 800px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Create a html table with java script</title>
+</head>
+
+<script type='text/javascript'>;
+
+	
+
+
+
+window.onload = function(){
+
+	let allBooks =[
+      {
+        title:"Every Page is Page One",
+        author:"Mark Baker",
+        cover_image:"https://everypageispageone.com/wp-content/uploads/2013/10/cover.gif",
+        has_read:false
+      },
+      {
+        title:"Language Truth and Logic",
+        author:"AJ Ayer",
+        cover_image:"https://m.media-amazon.com/images/I/51fbhxkPJML._SY346_.jpg",
+        has_read:true
+
+      }
+    ];
+
+	var body = document.getElementsByTagName("body")[0];
+	var table = document.createElement('Table');
+	table.setAttribute('border','1');
+	table.setAttribute('width','100%');
+	var tblB = document.createElement('TBODY');
+	table.appendChild(tblB);
+
+	for (var i=0; i<3; i++){
+		var tr = document.createElement('TR');
+		tblB.appendChild(tr);
+
+		for (var j=0; j <3; j++){
+			var td = document.createElement('TD');
+			tr.appendChild(td);
+
+			}
+	}
+
+
+	table.getElementsByTagName("TD")[0].innerHTML = "Title";
+	table.getElementsByTagName("TD")[1].innerHTML = "Author";
+	table.getElementsByTagName("TD")[2].innerHTML = "Image";
+	table.getElementsByTagName("TD")[3].innerHTML = allBooks[0].title;
+	table.getElementsByTagName("TD")[4].innerHTML = allBooks[0].author;
+	table.getElementsByTagName("TD")[5].innerHTML = " ";
+	table.getElementsByTagName("TD")[6].innerHTML = allBooks[1].title;
+	table.getElementsByTagName("TD")[7].innerHTML = allBooks[1].author;
+	table.getElementsByTagName("TD")[8].innerHTML = " ";
+
+	var img = document.createElement('img');
+    img.src = "https://m.media-amazon.com/images/I/51fbhxkPJML._SY346_.jpg";
+    img.setAttribute("style", "width:100px; height:100px;");
+    table.getElementsByTagName("TD")[5].appendChild(img);
+    var img2 = document.createElement('img');
+    img2.src = "https://everypageispageone.com/wp-content/uploads/2013/10/cover.gif";
+    img2.setAttribute("style", "width:100px; height:100px;");
+    table.getElementsByTagName("TD")[8].appendChild(img2);
+
+
+    
+    if (allBooks[0].has_read) {
+            tr.setAttribute("style", "color:red");
+        }
+    if (allBooks[1].has_read) {
+            tr.setAttribute("style", "color:red");
+        }
+
+
+
+	body.appendChild(table);
+
+
+}
+</script>
+
+<body>
+
+
+
+</body>
+</html>

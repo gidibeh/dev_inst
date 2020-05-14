@@ -1,0 +1,71 @@
+h1 { 
+	color: #3498db;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+ }
+
+
+
+
+ul li {
+    /* Text color */
+    color: black;
+    list-style-type: none;
+}
+
+ul li:before {
+    float: left;
+    margin: 0 0 0 -1em;
+    width: 1em;
+    content: '\2022';
+    color: #3498db;
+    padding-right: 0.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+body {
+
+	border: 10px solid #bdc3c7;
+	padding: 20px;
+	width: 80%;
+	max-width: 800px;
+	margin: 20px auto;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+hr {
+	width: 40%;
+	text-align:left;
+	border-width: 3px;
+	margin-left:0;
+}
+
+.titles{
+	color: #3498db;
+
+}
+
+.float {
+	float: left;
+}
+
+img { 
+  width: 15%;
+  height: 10%;
+  margin: 5px;
+  float: right;
+}
+
+.clear
+{
+     clear: both;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}

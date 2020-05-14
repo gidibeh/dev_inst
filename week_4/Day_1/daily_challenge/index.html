@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+	
+
+let words = prompt("Give me a string").split(" ");
+let max = 0;
+let longest;
+let border = "";
+let space = '_';
+
+
+//longest is largest string length
+for(let i = 0; i < words.length; i++){
+    if(words[i].length > max){
+        max = words[i].length;
+        longest = words[i];
+    }      
+} 
+
+//border top+last row
+for(let i = 0; i< longest.length+2; i++)
+{
+    border = border.concat("*");
+}
+
+
+function frame() {
+	console.log(border);
+	for(let i = 0; i < words.length; i++){
+		console.log("*" + words[i] + " ".repeat((border.length-2)-words[i].length) + "*")
+	} 
+	console.log(border);
+}
+
+frame();
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

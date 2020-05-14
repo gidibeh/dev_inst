@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja 1</title>
+	<style type="text/css">
+		
+		.button {
+  		color: red;
+  }
+
+
+	</style>
+	
+</head>
+<body>
+	<p>Click the below button <span style="color:red">"get geolocation"</span> to <span style="color:blue">get</span> the exact coordinates </p>
+
+	<button class="button" onclick="getLocation()">Get geolocation</button>
+
+	<p id="demo"></p>
+
+	<script>
+	var x = document.getElementById("demo");
+
+	function getLocation() {
+  	if (navigator.geolocation) {
+    	navigator.geolocation.getCurrentPosition(showPosition);
+  	} else { 
+    	x.innerHTML = "Geolocation is not supported by this browser.";
+  		}
+	}
+
+	function showPosition(position) {
+ 	 x.innerHTML = "Latitude: " + position.coords.latitude + 
+ 	 "<br>Longitude: " + position.coords.longitude;
+	}
+	</script>
+</body>
+</html>
+
+

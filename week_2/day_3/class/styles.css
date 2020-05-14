@@ -1,0 +1,32 @@
+h2{
+	font-weight: bold;
+	color: ;
+}
+
+.img-thumbnail {
+	border-radius: ;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.card {
+	background-color: #ededed;
+}
+
+.search {
+	margin: 0px;
+}
+
+body {
+	margin: 20px;
+	padding: 20px;
+}

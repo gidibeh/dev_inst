@@ -1,0 +1,51 @@
+
+.jumbotron{
+        background-image: url("black.jpg");
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    
+
+.text {
+    	color: #ffffff;
+    	text-align: center;
+    	margin-top: 100px;
+    	font-size: large;
+    	font-family: "Open Sans";
+   }
+
+h2, a {
+	color: #ffffff; 
+
+}
+
+.navbar{
+	color: #ffffff;
+}
+
+.fas{
+	color: #007bff;
+}
+
+.colors {
+    	color: #007bff;
+    	margin-top: 30px;
+    	margin-bottom: 30px;
+}
+
+.space{
+  	margin-left: 55%;
+}
+
+.special {
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #ffffff;
+}
+
