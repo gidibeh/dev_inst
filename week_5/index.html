@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			margin: 100px;
+			background-color: red;
+		}
+
+	</style>
+
+
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <div id="diver"></div>
+    <div id="diver2">double-click me</div>
+    <p>Enter your name: <input type="text" onfocus="myForm(this)"></p>
+    <script>
+        
+        var a = document.getElementById("btn")
+        var b = document.getElementById("diver")
+        var c = document.getElementById("diver")
+        var d = document.getElementById("diver2")
+        
+
+        a.addEventListener("click", RespondClick);
+        b.addEventListener("mouseover", RespondMouseOver);
+        c.addEventListener("mouseout", RespondMouseOut);
+        d.addEventListener("dblclick", dblclick); 
+        f.addEventListener("onfocus", myForm);
+         
+         
+
+        function RespondClick() { 
+            alert("Button Clicked")
+        } 
+
+        function RespondMouseOver() { 
+            alert("My mouse is over the div")
+        } 
+
+        function RespondMouseOut() { 
+            alert("My mouse is out of the div")
+        }     
+
+        function dblclick(){
+ 		 let div = document.getElementById("diver2");
+  		 document.body.style.backgroundColor="blue";
+		}
+
+		function myForm(f) {
+ 		 f.style.background = "blue";
+		}
+
+    </script>
+</body>
+</html>
