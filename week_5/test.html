@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+</head>
+
+
+
+<body>
+<p id="demo"></p>
+<button onclick="myStopFunction()">Start timer</button>
+</body>
+
+
+
+
+
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = 500;
+  var t = d - 1;
+  // Date.toLocaleTimeString() returns a string with a language sensitive representation of the time portion of this date
+  document.getElementById("demo").innerHTML = t;
+}
+
+function myStopFunction() {
+  clearInterval(myVar);
+}
+</script>
+</html>
