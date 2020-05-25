@@ -19,4 +19,17 @@
 
 
 </body>
+
+<script type="text/javascript">
+	let pS = document.getElementsByTagName("p");
+	for (x of pS){
+  	x.setAttribute("class","para_article");
+	}
+
+// 2
+let article = document.getElementsByTagName("article")[0];
+article.removeChild(article.lastChild);
+
+
+</script>
 </html>

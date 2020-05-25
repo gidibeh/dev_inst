@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+
+<script type="text/javascript">
+const array = [
+ {
+   username: "john",
+   team: "red",
+   score: 5,
+   items: ["ball", "book", "pen"]
+ },
+ {
+   username: "becky",
+   team: "blue",
+   score: 10,
+   items: ["tape", "backpack", "pen"]
+ },
+ {
+   username: "susy",
+   team: "red",
+   score: 55,
+   items: ["ball", "eraser", "pen"]
+ },
+ {
+   username: "tyson",
+   team: "green",
+   score: 1,
+   items: ["book", "pen"]
+ },
+];
+
+
+
+//1 Create an array using forEach that has all the usernames with a “!” to each of the usernames
+
+array.forEach((number) => {
+		number.username = number.username+"!";
+		console.log(number.username);
+	});
+// john!
+// becky!
+// susy!
+// tyson!
+
+
+
+//2 Create an array using forEach that has all the usernames of the players which score is bigger than 5. Use ternary operator
+	let newArray = [];
+	array.forEach((number, i) => {
+		if (number.score > 5) {
+			newArray[i] = number.score;
+			console.log(newArray[i]);
+		} else {
+			console.log("not");
+		}
+		
+	});
+
+
+//3 Find the total score of the users, and display it
+
+var total = 0;
+array.forEach( function(number) {
+    total += number.score;
+});
+
+
+console.log(total);
+
+</script>
+</html>
