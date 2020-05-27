@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title></title>
+
+ 		<style>  
+            body{padding-top:30px;} 
+            label,input{display:block;}  
+        </style>
+
 </head>
 <body>
 
@@ -18,17 +24,132 @@
 	What did you think of the article ?<input type="text" name="questionToUser">
 
 
+<p id="bold"><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
+<strong>end</strong> you <strong>will</strong> be great Developers!
+<strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
+
+      <p>Input radius value and get the volume of a sphere.</p> 
+        <form  id="MyForm"> 
+            <label for="radius">Radius</label><input type="text" name="radius" id="radius" required> 
+            <label for="volume">Volume</label><input type="text" name="volume" id="volume"> 
+            <input type="submit" value="Calculate" id="submit">    
+        </form> 
+
+
 </body>
 
 <script type="text/javascript">
-	let pS = document.getElementsByTagName("p");
-	for (x of pS){
+
+	//Ex1.1
+	let allPs = document.getElementsByTagName("p");
+	for (x of allPs){
   	x.setAttribute("class","para_article");
 	}
 
-// 2
-let article = document.getElementsByTagName("article")[0];
-article.removeChild(article.lastChild);
+	//Ex1.2
+	let article = document.getElementsByTagName("article")[0];
+	article.removeChild(article.lastChild);
+
+
+	//Ex1.3
+	let h2 = document.getElementsByTagName("h2")[0];
+	h2.addEventListener('click', deleteHeader);
+
+	function deleteHeader(){
+	  let h2 = document.getElementsByTagName("h2")[0];
+	  h2.parentNode.removeChild(h2);
+	}
+
+
+	//Ex1.4
+	let h1 = document.getElementsByTagName("h1")[0];
+	h1.style.fontSize = Math.random()*100+"px";
+	h1.addEventListener("click", hideH1);
+	function hideH1(){
+	  let h1 = document.getElementsByTagName("h1")[0];
+	  h1.style.display="none";
+	}
+
+	//Ex1.5
+	pS[0].addEventListener("click",hideP);
+	function hideP(){
+	  let p = document.getElementsByTagName("p")[0];
+	 	p.style.opacity="0";
+	 }
+
+
+	//Ex1.6
+	pS[1].addEventListener("click",hideP);
+	function hideP(){
+	  let p = document.getElementsByTagName("p")[1];
+	 	p.style.transition="opacity 2s ease-in-out ";
+		}
+
+	//Ex1.7
+
+		function addToTable(){
+
+		  let input = document.getElementsByTagName("input");
+		  let addEnd = false;
+		  for( x of input){
+		    if (x.value){
+		      addEnd=true;
+		    }
+		    else{
+		      addEnd=false;
+		    }
+		  }
+
+		  if(addEnd){
+
+		    let table = document.createElement("table");
+		    let row = table.insertRow(0);
+		    let cell1 = row.insertCell(0);
+		    let cell2 = row.insertCell(1);
+		    cell1.innerHTML = input[0].value;
+		    cell2.innerHTML = input[1].value;
+		     document.body.appendChild(table);
+		  }
+		}
+
+
+//Ex 2.1
+
+
+function getBold_items(){
+  let bold = document.getElementById("bold").getElementsByTagName("strong");
+  return bold;
+}
+
+
+
+function highlight(){
+  let items=getBold_items();
+  for (let x of items){
+    x.style.color="blue";
+  }
+}
+
+function return_normal(){
+  let items=getBold_items();
+  for (let x of items){
+    x.removeAttribute("style");
+  }
+}
+let bold=document.getElementById("bold");
+bold.addEventListener("mouseover",highlight);
+bold.addEventListener("mouseout",return_normal);
+
+
+//Ex 3
+let radius = document.getElementById('MyForm');
+radius.addEventListener("submit",calculate);
+
+function calculate(e){
+  let radius = parseFloat(document.getElementById('radius').value);
+  let volume = document.getElementById('volume');
+  volume.value = 4*Math.pow(radius,3)*Math.PI / 3;
+ }
 
 
 </script>
