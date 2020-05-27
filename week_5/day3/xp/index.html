@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<style>
+
+		#container {
+		  width: 400px;
+		  height: 400px;
+		  position: relative;
+		  background: yellow;
+		  margin-bottom: 100px;
+		}
+		#animate {
+		  width: 50px;
+		  height: 50px;
+		  position: absolute;
+		  background-color: red;
+		}
+
+		
+     
+
+
+	</style>
+<body>
+<p><button onclick="myMove()">Click Me</button></p>
+
+		<div id ="container" ondragover="over(event);" ondrop="drop(event);" >
+		  <div id ="animate"> 	
+		  </div>
+		</div>
+
+		
+    	<div id = "animate" draggable ="true" ondragstart="start(event);"></div>
+
+	
+
+     <script type="text/javascript">
+
+     	//Ex 1
+
+     	function myMove() {
+            let elem = document.getElementById("animate");
+            let pos = 0;
+            let trans = setInterval(frame, 10);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(trans);
+                } else {
+                    pos++;
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+
+     	//Ex 2
+
+
+     	function start(e){
+		  let elem = document.getElementById(event.target.id);
+		  elem.style.backgroundColor="blue";
+		}
+
+		function over(e){
+		  let elem = document.getElementById(event.target.id);
+		  elem.style.backgroundColor="purple";
+		}
+
+		function drop(e){
+		  let elem = document.getElementById(event.target.id);
+		  elem.style.backgroundColor="orange";
+		}
+
+     </script>
+</body>
+</html>
