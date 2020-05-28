@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+
+
+<script type="text/javascript">
+	
+
+
+
+	let groceries = {
+    fruits : ["pear", "apple", "banana"],
+    vegetables: ["tomatoes", "cucumber", "salad"],
+    totalPrice : "20$",
+    other : {
+        payed : true,
+        meansOfPayment : ["cash", "creditCard"]
+    }
+}
+
+//Ex 1
+	let newObj = groceries;
+
+//Ex 2
+
+	groceries.totalPrice = "35$"
+// Change totalPrice by 35$. Does this key was also modified in the copied object ?
+//Yes, because its a reference to the original object
+
+//Ex 3
+	groceries.other.payed = false;
+// Change payed by false. Does this key was also modified in the copied object ? Why ?
+ 
+// Yes, same reason as before in Ex 2. The object is a reference to a location in memory, which we just changed
+
+
+
+
+
+
+
+</script>
+</html>
