@@ -11,9 +11,51 @@
 <script type="text/javascript">
 	let balance = prompt("how much do you have in your acocunt?");
 	const vat = 1.17;
-	const expenses = [10, 20, 30, -40, -50];
-	let 
+	const expenses = ["+10", "-20", "+30", "-40", "-50"];
+	let processing = (expenses) => {
+		expenses.forEach((val, ind, arr) => {
+			if (val[0] != "+") {arr[ind] = `${parseINT(val,10)*vat}`}
+	});
+};
+	function doAccounting(account, expenses){
+		account = parseINT(account, 10)
+		processing(expenses);
+		expenses.forEach((val) => account = account+parseINT(val,10));
+		return account;
+	}
+doAccounting(balance, expenses);			
+
+
+//Ex 2
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+color.forEach((val, ind) => {console.log(`#${ind+1} choice is ${val}`)});
+
+//Ex 3 
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]; 
+let ordinal = ["th","st","nd","rd"];
+color.forEach((val, ind) => {
+	ind == 0 ? console.log(`#${ind+1}${ordinal[1]} choice is ${val}`) :
+	ind == 1 ? console.log(`#${ind+1}${ordinal[2]} choice is ${val}`) :
+	ind == 2 ? console.log(`#${ind+1}${ordinal[3]} choice is ${val}`) :
+	ind == 4 ? console.log(`#${ind+1}${ordinal[0]} choice is ${val}`) :
+	ind == 5 ? console.log(`#${ind+1}${ordinal[0]} choice is ${val}`) :
+	ind == 6 ? console.log(`#${ind+1}${ordinal[0]} choice is ${val}`) 
+});
+
 
 
 </script>
 </html>
+
+
+
+
+
+
+
+Exercise 4
+Write a JavaScript function to check whether an input is a string or not.
+console.log(is_string('hello')); 
+//true
+console.log(is_string([1, 2, 4, 0]));
+//false
