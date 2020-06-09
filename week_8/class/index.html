@@ -1,9 +1,34 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
+<head><title>test</title>
+
+    <script type="text/javascript">
+
+    function validateForm() {
+  		var x = document.forms["myForm"]["fname"]["lname"].value;
+		  if (x == "") {
+		    alert("Name must be filled out");
+		    return false;
+		  }
+		}
+
+	
+
+</script>
+
 </head>
+
 <body>
-	<h1>Hello Class</h1>
+    <form action="google.com" method="GET" name="myForm" onsubmit="return validateForm()">
+        <p><label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="fname"></p>
+
+        <p><label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="lname"></p>
+
+        <input value="Submit" type="submit" onsubmit="return validateForm()">
+    </form>
+
+
 </body>
 </html>
+

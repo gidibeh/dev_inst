@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+  function sendForm() {
+    var a = document.forms["myForm"]["fname"].value;
+    var b = document.forms["myForm"]["lname"].value;
+    if (a == null || a == "" || b == null || b == "") {
+      alert("Please Fill All Required Fields");
+      return false;
+    }
+    const myArr = [a,b];
+    var myJSON = JSON.stringify(myArr);
+    alert(myJSON);
+
+ }
+  
+
+
+</script>
+</head>
+<body>
+
+<h2>JavaScript validation for empty input field</h2>
+<p>Try to submit the form without entering any text.</p>
+
+<form name="myForm" action="" onsubmit="return sendForm()" method="POST" required>
+  First Name: <input type="text" name="fname">
+  Last Name: <input type="text" name="lname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
