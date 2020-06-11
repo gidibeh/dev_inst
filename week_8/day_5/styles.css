@@ -1,0 +1,42 @@
+html {
+	height: 100%;
+}
+
+#title {
+	font-size: 100px;
+}
+
+body {
+	background: url(stars.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: 'Lato', sans-serif;
+	color: #D4AF37;
+}
+
+#content {
+	text-align: center;
+	padding-top: 5%;
+	text-shadow: 0px 4px 3px block, 
+				 0px 8px 13px block,
+				 0px 18px 23px block;	
+}
+
+.centered {
+	margin: 10%;
+}
+
+#button {
+	margin-top: 20px;
+}
+
+#main {
+	border-radius: 25px;
+  border: 2px solid #D4AF37;
+  padding: 20px; 
+  margin-left: 500px;
+  margin-right: 500px;
+  min-height: 300px;
+  max-height: 500px; 
+  
+ }
