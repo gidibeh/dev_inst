@@ -1,0 +1,83 @@
+
+		.img-container {
+			text-align: center;
+			margin-top: 150px;
+		}
+
+
+		#logo-container {
+			text-align: left;
+		}
+
+
+		#find_button {
+			background-color: transparent;
+			border-radius: 50%;
+			margin-left: 0px;
+			text-align: center;
+			height: 80px;
+			width: 80px;
+			position: absolute;
+			margin-top: -193px;
+			margin-left: 1220px;
+			cursor: pointer;
+			outline: none;
+		}
+
+		#pokemon_Image {
+			margin-left: 840px;
+			margin-top: -580px;
+			width: 230px;
+			height: 230px;
+			position: absolute;
+		}
+
+
+		#box {
+			margin-left: 800px;
+			margin-top: -250px;
+			height: 250px;
+			width: 300px;
+			text-align: center;
+			font-size: 12px;
+			color: black;
+			position: absolute;
+		}
+
+
+		#loadingImage {
+			width: 70px;
+			height: 70px;
+			margin-top: 60px;
+			margin-left: -30px;
+			position: absolute;
+		}
+
+
+		.button-left-right{
+			position: absolute;
+			margin-top: -168px;
+			margin-left: 650px;
+		}
+
+
+		 #previous{
+
+			cursor: pointer;
+			width: 45px;
+			height: 25px;
+			background-color: transparent;
+			outline: none;
+			
+		}
+
+		#next{
+			cursor: pointer;
+			width: 45px;
+			height: 25px;
+			margin-left: 8px;
+			background-color: transparent;
+			outline: none;
+		} 
+
+		

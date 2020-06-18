@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+ <body>
+        <h1>Introduction to Data Sources</h1>
+
+
+
+
+        <p>Connecting to your data is the first step in analyzing your business information. Sisense has native connectors to many SQL databases, NoSQL sources, and popular web applications. </p>
+        <p>For a short video overview of connecting to data, see below.</p>
+        <p>
+            <object src="https://www.youtube.com/embed/yI9BV9SJE9I" style="width: 560px;height: 315px;" class="si-video">
+            </object> </p>
+        <h2 class="notoc">Data Source Connection Types</h2>
+        <p>There are two ways you can connect to your data sources. The connection type you choose depends on your use-case and the data source:</p>
+        <ol>
+            <li>Live:<br />Live connections connect directly to the data source. Use a Live connection if your data changes frequently and your dashboard must reflect this.<br />Learn more about <MadCap:xref href="LiveConnect.htm"> Live Connect</MadCap:xref></li>
+            <li><MadCap:variable name="Variables.ElastiCube" />:<br />Import your data into the ElastiCube to take advantage of Sisense’s high performance database.<br />Learn more about <MadCap:xref href="ElastiCubes.htm">[%=Variables.ElastiCube%]s</MadCap:xref>.</li>
+        </ol>
+        <h3 class="notoc">Live Data Source Connectors</h3>
+        <p>The following is a list of supported Live data source connectors, all of which are pre-installed in <MadCap:variable name="Variables.ProductName" />. Click a connector to view documentation about it.</p>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                <ul id="myUL">
+            <li>
+                <p><a href="connectors/bigquery-online.htm">Google BigQuery</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/memsql.htm">MemSQL</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/mysql-online.htm">MySQL</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/oracle-online.htm">Oracle</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/postgres-online.htm">PostgreSQL</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/redshift-online.htm">Redshift</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/snowflake-online.htm">Snowflake</a> (**)</p></li>
+            <li>
+                <p><a href="connectors/sql-online.htm">SQL Server</a> (**)</p></li>
+        </ul>
+        <h3 class="notoc"><MadCap:variable name="Variables.ElastiCube" /> Data Source Connectors</h3>
+        <p>The following is a list of supported <MadCap:variable name="Variables.ElastiCube" /> data source connectors. For those that are not pre-installed in <MadCap:variable name="Variables.ProductName" />, click <a href="https://www.cdata.com/solutions/bi/sisense/">here</a> to download them. Click a connector to view documentation about it.</p>
+    
+            <li>
+                <MadCap:xref href="connectors/access-jdbc.htm">Access</MadCap:xref>  (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Airtable</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">Asana</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/athena.htm">Athena</MadCap:xref> </li>
+            <li>
+                <MadCap:xref href="connectors/azuredataman.htm" target="_blank">Azure Data Management</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/azuretablestor.htm" target="_blank">Azure Table Storage</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/bingads.htm" target="_blank">Bing Ads</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/bing.htm">Bing Search</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/box.htm">Box</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/cassandra.htm" target="_blank">Cassandra</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/cosmosdb.htm" target="_blank">CosmosDB</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/couchbase.htm" target="_blank">CouchBase</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/csv-online.htm">CSV</MadCap:xref> (**)</li>
+            <li><a href="http://developer.sisense.com/display/API2/Custom+REST+Connector">Custom REST</a> </li>
+            <li><a href="connectors/jdbc-cdata.htm">DataRobot</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/dropbox.htm">Dropbox</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/dynamo-db.htm">DynamoDB</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Elasticsearch</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/elasticsearch.htm">ElastiCube</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Email</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/exact.htm">Exact Online</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Excel Services</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/excel-online.htm">Excel</MadCap:xref> 
+(**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Exchange</a><![CDATA[          ]]></li>
+            <li>
+                <MadCap:xref href="connectors/facebook.htm" target="_blank">Facebook</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/FTP.htm">FTP</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/jdbc.htm">Generic JDBC Driver</MadCap:xref> 
+(**)           </li>
+            <li>
+                <MadCap:xref href="connectors/odbc.htm">Generic ODBC Driver</MadCap:xref><![CDATA[           ]]></li>
+            <li>
+                <MadCap:xref href="connectors/oledb.htm">Generic OLE DB Driver</MadCap:xref><![CDATA[            ]]></li>
+            <li>
+                <MadCap:xref href="connectors/gmail.htm">Gmail</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/google-adwords.htm">Google AdWords</MadCap:xref> 
+(**)           </li>
+            <li>
+                <MadCap:xref href="connectors/google-analytics.htm">Google Analytics</MadCap:xref> ^(**)          </li>
+            <li>
+                <MadCap:xref href="connectors/bigquery-online.htm">Google BigQuery</MadCap:xref> 
+(**) </li>
+            <li><a href="connectors/jdbc-cdata.htm">Google Cloud Spanner</a><![CDATA[       ]]></li>
+            <li>
+                <MadCap:xref href="connectors/googledrive.htm" target="_blank">Google Drive</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/google_sheets_online.htm">Google Sheets</MadCap:xref> 
+(**)            </li>
+            <li>
+                <MadCap:xref href="connectors/greenplum.htm" target="_blank">GreenPlum</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/hbase.htm" target="_blank">HBase</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/heroku-postgres.htm">Heroku Postgres</MadCap:xref><![CDATA[ 
+            ]]></li>
+            <li>
+                <MadCap:xref href="connectors/hadoop-via-hive.htm">Hive</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/hubspot.htm">HubSpot</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">IBM&#160;Cloud SQL&#160;Query</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">IBM&#160;Cloudant</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">Impala</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/instagram.htm" target="_blank">Instagram</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/intacct.htm">Intacct</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">JDBC-ODBC Bridge Driver</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/jira.htm" target="_blank">Jira</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/json.htm">JSON</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">LDAP</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/linkedin.htm" target="_blank">LinkedIn</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/mail-chimp.htm">MailChimp</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/mariadb.htm" target="_blank">MariaDB</MadCap:xref> *</li>
+            <li><a href="connectors/jdbc-cdata.htm">MarkLogic</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/memsql.htm">MemSQL</MadCap:xref> (**)            </li>
+            <li>
+                <MadCap:xref href="connectors/ms-active-directory.htm">Microsoft Active Directory</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/ms-dynamics-crm.htm">Microsoft Dynamics CRM</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/dynamics-nav.htm">Microsoft Dynamics Nav</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/mongodb_online.htm">MongoDB</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/mysql-online.htm">MySQL</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/odata.htm" target="_blank">OData</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/oracle-online.htm">Oracle</MadCap:xref> (**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Parquet</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">Phoenix</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/postgres-online.htm">PostgreSQL</MadCap:xref> (**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Presto</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/quickbooks-desktop.htm">Quickbooks Desktop</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/quickbooks-online.htm">Quickbooks Online</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/redis.htm" target="_blank">Redis</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/redshift-online.htm">Redshift</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/rest.htm">REST</MadCap:xref> *</li>
+            <li>
+                <MadCap:xref href="connectors/salesforce-online.htm">Salesforce</MadCap:xref> (**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">SAP&#160;Fieldglass</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">SAP&#160;HANA</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">SAP&#160;Hybris C4C</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/sendgrid.htm" target="_blank">SendGrid</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/service-now.htm">ServiceNow</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">SFTP</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">SharePoint</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/sharepoint-excel.htm">SharePoint Excel Services</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/sisense-elasticube.htm">Sisense ElastiCube</MadCap:xref> </li>
+            <li>
+                <MadCap:xref href="connectors/shopify.htm">Shopify</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/snowflake-online.htm">Snowflake</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/sparkSQL.htm">SparkSQL</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/splunk.htm">Splunk</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/stripe.htm">Stripe</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">SQL Analysis Services</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/sql-online.htm">SQL Server</MadCap:xref> (**)</li>
+            <li>
+                <MadCap:xref href="connectors/sugarcrm.htm">SugarCRM</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">SurveyMonkey</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">Sybase</a>
+            </li>
+            <li><a href="connectors/jdbc-cdata.htm">Sybase IQ</a>
+            </li>
+            <li>
+                <MadCap:xref href="connectors/teradata-online.htm">Teradata</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/twilio.htm">Twilio</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/twitter.htm">Twitter</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/xero.htm">Xero</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/xml.htm">XML</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/youtube.htm">YouTube</MadCap:xref> (*,**)</li>
+            <li>
+                <MadCap:xref href="connectors/youtube-analytics.htm">YouTube Analytics</MadCap:xref> (*,**)</li>
+            <li><a href="connectors/jdbc-cdata.htm">Zendesk</a>
+            </li>
+            <li>Other Connectors *</li>
+        </ul>
+        <p>* This connector is provided by a certified partner. Sisense carefully evaluates and certifies each external connector to work with Sisense. This helps ensure that external connectors are always up-to-date and fully supported.</p>
+        <p>** This connector is also supported by Sisense for Linux environments.</p>
+        <p><span class="bold">Notes for the certified connectors: </span>
+        </p>
+        <ul>
+            <li>The connector drivers are certified for Sisense v7.2 and above.</li>
+            <li MadCap:conditions="Default.NextVersion">Sisense prior to v8.0: <a href="https://www.cdata.com/solutions/bi/sisense/" target="_blank">Download</a>  a 30-day free-trail of the connector driver. Contact Sisense for the full license version.</li>
+            <li MadCap:conditions="Default.NextVersion">Sisense v8.0 and above: <a href="https://www.cdata.com/solutions/bi/sisense/" target="_blank">Download</a> a ready-to-use connector driver.</li>
+            <li MadCap:conditions="Default.NextVersion">For instructions on connecting to certified connectors not included in the above list, see <a href="connectors/jdbc-cdata.htm"><MadCap:xref href="connectors/jdbc-cdata.htm">Connecting to JDBC Connectors Using CData Drivers</MadCap:xref></a>. </li>
+        </ul>
+        <h2 class="notoc">Technology Partner Connectors</h2>
+        <p>Technology partners enable connections to data sources via <a href="https://www.sisense.com/guides/sisense-and-fivetran-brochure/">the data pipeline</a>. They also manage API changes and limits, and deliver comprehensive support as part of their service. Import your data into a data warehouse (such as, Redshift, Google BigQuery, Snowflake, SQL Server, MySQL, and PostgreSQL) to access your data with either ElastiCube or Live data models.</p>
+        <p>Sisense technology partner connectors include:</p>
+        <ul>
+            <li>Adobe Analytics</li>
+            <li>Apple Search Ads</li>
+            <li>AppsFlyer</li>
+            <li>DoubleClick</li>
+            <li>Facebook</li>
+            <li>Facebook Ads</li>
+            <li>Freshdesk</li>
+            <li>LinkedIn Ads</li>
+            <li>Magento</li>
+            <li>Marketo</li>
+            <li>Netsuite</li>
+            <li>Pardot</li>
+        </ul>
+        <p>Contact your Account Executive or Customer Success Manager to discuss the full functionality Sisense technology partners provide, and to start your free trial.</p>
+        <p>Learn more about connecting to data sources via the <a href="https://documentation.sisense.com/latest/managing-data/connectors/stitch.htm">Stitch data pipeline</a>.</p>
+        <h2 class="notoc">Vendor JDBC Connectors</h2>
+        <p>With Sisense's <a href="https://documentation.sisense.com/latest/managing-data/connectors/jdbc.htm">generic JDBC driver</a> you can leverage native JDBC connectors to connect to additional data sources. The connectors are provided by the following data source vendors:</p>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/azure/data-explorer/sisense" target="_blank">Azure Data Explorer</a>
+            </li>
+            <li><a href="https://github.com/ClickHouse/clickhouse-jdbc">ClickHouse</a>
+            </li>
+            <li><a href="https://community.denodo.com/drivers/jdbc/32" target="_blank">Denodo</a>
+            </li>
+            <li><a href="https://www.dremio.com/drivers/" target="_blank">Dremio</a>
+            </li>
+            <li><a href="http://www-01.ibm.com/support/docview.wss?uid=swg21363866" target="_blank">IBM DB2</a> (<MadCap:xref href="connectors/ibm-db2.htm">more information</MadCap:xref>)</li>
+            <li><a href="https://www.cloudera.com/downloads/connectors/impala/jdbc/2-6-4.html">Impala</a>
+            </li>
+            <li><a href="https://prestodb.github.io/docs/current/installation/jdbc.html" target="_blank">PrestoDB</a>
+            </li>
+            <li><a href="https://www.vertica.com/download/vertica/client-drivers/" target="_blank">Vertica</a>
+            </li>
+        </ul>
+        <h2 class="notoc">Connecting to More Data Sources and Frameworks</h2>
+        <p>You can connect to many additional data sources by leveraging Sisense’s generic frameworks such as the <MadCap:xref href="https://documentation.sisense.com/latest/managing-data/connectors/odbc.htm">generic ODBC driver</MadCap:xref>, <a href="https://documentation.sisense.com/latest/managing-data/connectors/jdbc.htm">JDBC&#160;driver</a>, or <a href="https://developers.sisense.com/display/API2/Custom+REST+Connector">Custom REST Framework</a>.</p>
+        <p>Sisense supports these frameworks with frequent upgrades and new functionality. However, full connectors to specific data sources created through these frameworks are not supported.</p>
+        <h2 class="notoc">Dashboard Examples for Selected Connectors</h2>
+        <p>Sisense has created dashboard examples for a number of connectors to help and inspire you when creating dashboards from the data set of these and other connectors. Click on the links to learn more:</p>
+        <ul>
+            <li>Google Analytics (<a href="https://www.sisense.com/dashboard-examples/marketing/google-analytics-360-visits/" target="_blank">Visits</a> and <a href="https://www.sisense.com/dashboard-examples/marketing/google-analytics-360-transaction-and-revenue/" target="_blank">Revenue and Transactions</a>)</li>
+            <li><a href="https://www.sisense.com/dashboard-examples/it-oem/servicenow-weekly-analysis/" target="_blank">ServiceNow</a>
+            </li>
+            <li><a href="https://www.sisense.com/dashboard-examples/customer-service/microsoft-dynamic-crm/" target="_blank">Microsoft Dynamic CRM</a>
+            </li>
+            <li> <a href="https://www.sisense.com/dashboard-examples/marketing/facebook-insights/" target="_blank">Facebook Page Insights</a></li>
+            <li><a href="https://www.sisense.com/dashboard-examples/marketing/facebook-ads/" target="_blank">Facebook Ads</a>
+            </li>
+        </ul>
+        <p>A dashboard example for Facebook Page Insights:</p>
+        <p>
+            <img src="../../Resources/Images/facebook-dash-example.png" />
+        </p>
+
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, p, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    p = li[i].getElementsByTagName("p")[0];
+    txtValue = p.textContent || p.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+    </body>
+</html>

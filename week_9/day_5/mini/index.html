@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<div class="logo-container">
+		<img id="pokemon_Logo" src="./logo.png">
+	</div>
+
+
+
+	<div class="img-container">
+		<!-- Block parent element -->
+
+		<img class="pokedex-img" src="./pokedex.png" width="880" height="610">
+	</div>
+
+	<button id="find_button" onclick="fetchPokemon()"></button>
+
+
+
+
+
+	<!-- left panel left and right buttons -->
+	<div class="button-left-right">
+
+		<button id="previous" class="cross-square square-center-left" onclick="prevData()"></button>
+
+		<button id="next" class="cross-square square-center-right" onclick="nextData()"></button>
+
+	</div>
+
+	<img id="pokemon_Image" hidden="true">
+
+	<div id="box">
+		<h1 id="name"> </h1>
+		<p id="id"></p>
+		<p id="height"> </p>
+		<p id="weight"> </p>
+		<p id=""> </p>
+		<p id="type"> </p>
+		<p id="load"> </p>
+	</div>
+
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
