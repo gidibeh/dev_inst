@@ -1,0 +1,38 @@
+CREATE TABLE Table1 (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+);
+
+CREATE TABLE Table2 (
+    PersonID int,
+    Address varchar(255),
+    City varchar(255)
+);
+
+
+CREATE TABLE Table3 (
+    ItemID int,
+    PersonID int
+);
+
+SELECT table1.PersonID, table1.LastName, table1.FirstName, table2.PersonID
+FROM table1
+INNER JOIN table2
+ON table1.PersonID = table2.PersonID;
+
+SELECT table1.PersonID, table1.LastName, table1.FirstName, table2.PersonID
+FROM table1
+LEFT JOIN table2
+ON table1.PersonID = table2.PersonID;
+
+SELECT table2.PersonID, table1.Address, table1.City, table3.PersonID
+FROM table1
+RIGHT JOIN table2
+ON table2.PersonID = table3.PersonID;
+
+SELECT table2.PersonID, table1.Address, table1.City, table3.PersonID
+FROM table1
+FULL OUTER JOIN table2
+ON table2.PersonID = table3.PersonID;
+WHERE table2.PersonID = 2;
